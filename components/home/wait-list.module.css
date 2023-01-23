@@ -1,0 +1,244 @@
+.formContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+
+.background {
+  object-fit: cover;
+  object-position: top;
+  filter: opacity(0.35);
+}
+
+.submitBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  width: 70vw;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: linear-gradient(to bottom, #0b1321 30%, #0c294b) padding-box,
+    linear-gradient(
+        to right bottom,
+        #68eaff,
+        #4ddbff,
+        #44cbff,
+        #53baff,
+        #6ea6ff,
+        #809aff,
+        #9c89ff,
+        #bd74ff,
+        #cc67ff,
+        #db57ff,
+        #ec3fff,
+        #fe00fe
+      )
+      border-box;
+  border: 2px solid transparent;
+  box-shadow: 0px 5px 30px 10px rgba(104, 234, 255, 0.2);
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: opacity(0.3);
+  transform: scale(2);
+  transition: all 0.5s;
+}
+
+.submitBox:hover > .shapes {
+  transform: scale(2.2);
+  filter: opacity(0.7);
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.waitHeader {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+}
+
+.description {
+  font-size: 1.3rem;
+  width: 60%;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.form {
+  z-index: 1;
+}
+
+.form > div {
+  position: relative;
+}
+
+.form > div > label {
+  position: absolute;
+  top: 4.4rem;
+  left: 20px;
+  color: rgba(104, 234, 255, 0.5);
+  font-size: 1.3rem;
+  z-index: -1;
+}
+
+.emailInput {
+  border: 1px solid #68eaff;
+  border-right: none;
+  color: #68eaff;
+  font-size: 1.3rem;
+  padding: 20px;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  background-color: rgba(11, 19, 33, 0.4);
+  margin-top: 50px;
+}
+
+.emailInput:focus {
+  outline: 1px solid rgba(255, 255, 255, 0.75);
+  border: 1px solid transparent;
+}
+
+.submitBtn {
+  position: relative;
+  border: 1px solid #68eaff;
+  background-color: #68eaff;
+  color: transparent;
+  border-left: none;
+  font-size: 1.3rem;
+  padding: 20px;
+  filter: opacity(0.8);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  transition: all 0.3s;
+}
+
+.submitBtn:active {
+  filter: opacity(0.7);
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  filter: opacity(1);
+}
+
+.submitBtn:disabled {
+  filter: opacity(0.4);
+}
+
+.submitBtn:disabled:hover {
+  cursor: default;
+}
+
+.arrow,
+.check {
+  padding: 10px;
+  transition: all 0.3s linear;
+}
+
+.submitBtn:not([disabled]) > .arrow {
+  transform: rotate(360deg);
+}
+
+@media (max-width: 999px) {
+  .submitBox {
+    width: 80vw;
+  }
+
+  .waitHeader {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .submitBox {
+    width: 85vw;
+  }
+
+  .waitHeader {
+    font-size: 7vw;
+  }
+
+  .description {
+    font-size: 4vw;
+    width: 85%;
+  }
+
+  .form > div > label {
+    top: 2.8rem;
+    left: 15px;
+    font-size: 1rem;
+  }
+
+  .emailInput {
+    font-size: 1rem;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .submitBtn {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .arrow,
+  .check {
+    padding: 8px;
+  }
+
+  .shapes {
+    filter: opacity(0.2);
+  }
+
+  .submitBox:hover > .shapes {
+    filter: opacity(0.4);
+  }
+}
+
+@media (max-width: 425px) {
+  .shapes {
+    top: -50px;
+  }
+  .submitBox {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .form > div > label {
+    top: 2.8rem;
+    left: 15px;
+    font-size: 1rem;
+  }
+
+  .emailInput {
+    font-size: 0.8rem;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .submitBtn {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}

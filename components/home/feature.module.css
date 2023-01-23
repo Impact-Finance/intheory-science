@@ -1,0 +1,155 @@
+.feature {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50vh 0;
+  width: 100%;
+  align-self: flex-start;
+  overflow: hidden;
+  background-image: linear-gradient(
+    180deg,
+    rgba(11, 19, 33, 0) 0%,
+    rgba(11, 19, 33, 0.25) 5%,
+    rgba(11, 19, 33, 0.5) 10%,
+    rgba(11, 19, 33, 0.75) 15%,
+    rgba(11, 19, 33, 1) 25%
+  );
+}
+
+.leftHeader,
+.rightHeader {
+  position: absolute;
+  width: 55%;
+}
+
+.leftHeader h3,
+.rightHeader h3 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.leftHeader {
+  text-align: right;
+  left: 0;
+}
+
+.rightHeader {
+  text-align: left;
+  right: 0;
+}
+
+.highlight {
+  background-image: linear-gradient(
+    to right,
+    var(--color-accent-1) 25%,
+    var(--color-accent-2)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.leftHexContainer,
+.rightHexContainer {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  z-index: -1;
+  filter: opacity(0.5);
+  transition: all 1s;
+}
+
+.feature:hover > .leftHexContainer,
+.feature:hover > .rightHexContainer {
+  filter: opacity(1);
+}
+
+.leftHexContainer {
+  left: 50px;
+  animation: rotateRight 20s linear infinite;
+}
+
+.rightHexContainer {
+  right: 50px;
+  animation: flipAndRotateLeft 20s linear infinite;
+}
+
+.hexes {
+  object-fit: contain;
+}
+
+@keyframes rotateRight {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flipAndRotateLeft {
+  from {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  to {
+    transform: scaleY(-1) rotate(360deg);
+  }
+}
+
+@media (max-width: 999px) {
+  .leftHeader h3,
+  .rightHeader h3 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftHeader h3,
+  .rightHeader h3 {
+    font-size: 3.8vw;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 425px) {
+  .feature {
+    flex-direction: column;
+    background-image: linear-gradient(
+      180deg,
+      rgba(11, 19, 33, 0) 0%,
+      rgba(11, 19, 33, 0.25) 5%,
+      rgba(11, 19, 33, 0.5) 10%,
+      rgba(11, 19, 33, 0.75) 15%,
+      rgba(11, 19, 33, 1) 20%
+    );
+  }
+
+  .leftHexContainer,
+  .rightHexContainer {
+    height: 300px;
+    width: 100%;
+    left: 0;
+    top: 200px;
+    transform: rotate(60deg);
+    animation: none;
+    filter: opacity(0.9);
+  }
+
+  .leftHeader,
+  .rightHeader {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+  }
+
+  .leftHeader h3,
+  .rightHeader h3 {
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 2px;
+    font-weight: 100;
+    z-index: 5;
+  }
+}

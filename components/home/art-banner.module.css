@@ -1,0 +1,39 @@
+.artBanner {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  display: flex;
+  top: 30px;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 999px) {
+  .artBanner {
+    width: 115%;
+  }
+}
+
+@media (max-width: 768px) {
+  .artBanner {
+    width: 170%;
+  }
+}
+
+@media (max-width: 425px) {
+  .artBanner {
+    width: 115%;
+  }
+}

@@ -1,0 +1,95 @@
+.imageBoxRight,
+.imageBoxLeft {
+  position: absolute;
+  width: 40%;
+  height: 50vh;
+}
+
+.imageBoxRight {
+  left: 0;
+}
+
+.imageBoxLeft {
+  right: 0;
+}
+
+.imageBoxRight:nth-of-type(1),
+.imageBoxLeft:nth-of-type(1) {
+  transform: scale(1);
+}
+
+.imageBoxRight:nth-of-type(2),
+.imageBoxLeft:nth-of-type(2) {
+  transform: scale(0.5);
+}
+
+.imageBoxRight:nth-of-type(3),
+.imageBoxLeft:nth-of-type(3) {
+  transform: scale(0.25);
+}
+
+.imageBoxRight:nth-of-type(4),
+.imageBoxLeft:nth-of-type(4) {
+  transform: scale(0.125);
+}
+
+.featureImage {
+  object-fit: contain;
+}
+
+.imageBoxRight:nth-of-type(odd) > .featureImage,
+.imageBoxLeft:nth-of-type(odd) > .featureImage {
+  animation: rotateLeft 90s linear infinite, saturate 3s linear infinite;
+}
+
+.imageBoxRight:nth-of-type(even) > .featureImage,
+.imageBoxLeft:nth-of-type(even) > .featureImage {
+  animation: rotateRight 90s linear infinite, saturate 3s linear infinite;
+}
+
+.imageBoxRight:nth-of-type(odd) > .featureImage,
+.imageBoxLeft:nth-of-type(odd) > .featureImage {
+  animation: rotateRight 90s linear infinite, saturate 3s linear infinite;
+}
+
+.imageBoxRight:nth-of-type(even) > .featureImage,
+.imageBoxLeft:nth-of-type(even) > .featureImage {
+  animation: rotateLeft 90s linear infinite, saturate 3s linear infinite;
+}
+
+@keyframes saturate {
+  0% {
+    filter: saturate(1);
+  }
+  50% {
+    filter: saturate(2);
+  }
+  100% {
+    filter: saturate(1);
+  }
+}
+
+@keyframes rotateLeft {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateRight {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 425px) {
+  .imageBoxRight,
+  .imageBoxLeft {
+    position: absolute;
+    width: 80%;
+    height: 50vh;
+    filter: opacity(0.6);
+    top: 100px;
+    left: 10%;
+    z-index: -2;
+  }
+}

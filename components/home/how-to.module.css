@@ -1,7 +1,15 @@
-.main {
+.howContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   min-height: 100vh;
+  padding: 0 15%;
+}
+
+@media (max-width: 999px) {
+  .howContainer {
+    padding: 0 5%;
+  }
 }

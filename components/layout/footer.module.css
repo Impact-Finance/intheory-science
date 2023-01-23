@@ -1,0 +1,93 @@
+.fader {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.footer {
+  display: flex;
+  padding: 30px 10px;
+  justify-content: space-between;
+  border-top: 1px solid rgba(104, 234, 255, 0.5);
+  width: 90%;
+  height: 175px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoBox {
+  position: relative;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.logoBox:hover {
+  cursor: pointer;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.copyright {
+  filter: opacity(0.4);
+  margin-top: 50px;
+}
+
+.copyright a {
+  text-decoration: underline;
+  transition: all 0.2s;
+}
+
+.copyright a:hover {
+  filter: opacity(0.7);
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+.social {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 10px 25px;
+  transition: all 0.3s;
+  object-fit: contain;
+}
+
+.social:hover {
+  filter: opacity(0.5);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  .socials {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .social {
+    margin: 10px 15px;
+  }
+}

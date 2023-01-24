@@ -38,22 +38,25 @@ const WaitList = () => {
   const handleSubmit = async (e: MouseEvent) => {
     e.preventDefault();
     setPending(true);
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: email,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-    const response = await fetch('/api/waitlist', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: email,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response.ok) {
-      setSubmitted(true);
-      setError(false);
-      setEmail('');
-    } else {
+      if (response.ok) {
+        setSubmitted(true);
+        setError(false);
+        setEmail('');
+      } else {
+        setError(true);
+      }
+    } catch {
       setError(true);
     }
 

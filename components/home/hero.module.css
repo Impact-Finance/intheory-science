@@ -16,7 +16,7 @@
   z-index: -1;
   -o-object-position: bottom;
   object-position: bottom;
-  animation: enlarge 1250s linear infinite;
+  animation: enlarge 1000s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
@@ -141,7 +141,7 @@
 
 @keyframes enlarge {
   to {
-    transform: scale(1.5) translateY(-20%);
+    transform: scale(1.7) translateY(-30%);
   }
 }
 

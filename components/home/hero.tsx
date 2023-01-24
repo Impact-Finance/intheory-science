@@ -17,6 +17,8 @@ const Hero = ({ waitScroll }: HeroProps) => {
         alt="hexagon background"
         placeholder="blur"
         fill
+        sizes="100vw"
+        priority
       />
       <ArtBanner />
       <div className={styles.heroText}>

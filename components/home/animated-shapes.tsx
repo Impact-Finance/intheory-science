@@ -23,6 +23,12 @@ const AnimatedShapes = ({ images, direction }: AnimatedShapesProps) => {
             alt="feature image"
             placeholder="blur"
             fill
+            sizes="(max-width: 375px) 90vw, 
+            (max-width: 425px) 90vw, 
+            (max-width: 768px) 50vw, 
+            (max-width: 999px) 50vw,
+            (max-width: 1200px) 40vw,
+            40vw"
           />
         </figure>
       ))}

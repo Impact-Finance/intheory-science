@@ -15,6 +15,12 @@ const Artwork = ({ image }: ArtworkProps) => {
         alt="example image"
         placeholder="blur"
         fill
+        sizes="(max-width: 375px) 50vw, 
+        (max-width: 425px) 40vw, 
+        (max-width: 768px) 40vw, 
+        (max-width: 999px) 20vw,
+        (max-width: 1200px) 20vw,
+        20vw"
       />
     </div>
   );

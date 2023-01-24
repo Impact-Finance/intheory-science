@@ -28,6 +28,12 @@ const Footer = () => {
               src={inTheory}
               alt="inTheory logo"
               fill
+              sizes="(max-width: 375px) 60vw, 
+              (max-width: 425px) 60vw, 
+              (max-width: 768px) 40vw, 
+              (max-width: 999px) 30vw,
+              (max-width: 1200px) 20vw,
+              20vw"
             />
           </div>
           <p className={styles.copyright}>
@@ -51,6 +57,12 @@ const Footer = () => {
               src={twitter}
               alt="twitter"
               fill
+              sizes="(max-width: 375px) 25vw, 
+              (max-width: 425px) 25vw, 
+              (max-width: 768px) 25vw, 
+              (max-width: 999px) 15vw,
+              (max-width: 1200px) 15vw,
+              15vw"
             />
           </a>
           <a
@@ -62,6 +74,12 @@ const Footer = () => {
               src={linkedin}
               alt="linkedin"
               fill
+              sizes="(max-width: 375px) 25vw, 
+              (max-width: 425px) 25vw, 
+              (max-width: 768px) 25vw, 
+              (max-width: 999px) 15vw,
+              (max-width: 1200px) 15vw,
+              15vw"
             />
           </a>
           <a
@@ -73,6 +91,12 @@ const Footer = () => {
               src={github}
               alt="github"
               fill
+              sizes="(max-width: 375px) 25vw, 
+              (max-width: 425px) 25vw, 
+              (max-width: 768px) 25vw, 
+              (max-width: 999px) 15vw,
+              (max-width: 1200px) 15vw,
+              15vw"
             />
           </a>
           <a
@@ -84,6 +108,12 @@ const Footer = () => {
               src={medium}
               alt="medium"
               fill
+              sizes="(max-width: 375px) 25vw, 
+              (max-width: 425px) 25vw, 
+              (max-width: 768px) 25vw, 
+              (max-width: 999px) 15vw,
+              (max-width: 1200px) 15vw,
+              15vw"
             />
           </a>
         </div>

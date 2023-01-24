@@ -41,6 +41,7 @@ const WaitList = () => {
           src={background}
           alt="hexagon background"
           fill
+          sizes="100vw"
         />
         <Fade
           direction="up"

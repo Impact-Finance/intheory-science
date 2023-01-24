@@ -24,6 +24,12 @@ const Feature = ({ justify, images, text, span }: FeatureProps) => {
               src={hexGroup}
               alt="hexagons"
               fill
+              sizes="(max-width: 375px) 90vw, 
+              (max-width: 425px) 90vw, 
+              (max-width: 768px) 90vw, 
+              (max-width: 999px) 50vw,
+              (max-width: 1200px) 30vw,
+              20vw"
             />
           </div>
           <Fade
@@ -65,6 +71,12 @@ const Feature = ({ justify, images, text, span }: FeatureProps) => {
               src={hexGroup}
               alt="hexagons"
               fill
+              sizes="(max-width: 375px) 90vw, 
+              (max-width: 425px) 90vw, 
+              (max-width: 768px) 90vw, 
+              (max-width: 999px) 50vw,
+              (max-width: 1200px) 30vw,
+              20vw"
             />
           </div>
         </div>

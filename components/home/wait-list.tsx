@@ -101,7 +101,7 @@ const WaitList = () => {
               <div>
                 <input
                   type="text"
-                  name="address"
+                  name="emailAddress"
                   className={
                     error
                       ? `${styles.emailInput} ${styles.errorInput}`

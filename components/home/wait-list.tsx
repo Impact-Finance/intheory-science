@@ -141,7 +141,7 @@ const WaitList = () => {
                     <Image
                       className={styles.error}
                       src={errorIcon}
-                      alt="success"
+                      alt="error"
                       fill
                     />
                   )}
@@ -149,7 +149,7 @@ const WaitList = () => {
                     <Image
                       className={styles.pending}
                       src={pendingIcon}
-                      alt="success"
+                      alt="pending"
                       fill
                     />
                   )}

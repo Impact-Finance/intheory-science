@@ -40,6 +40,10 @@
   vertical-align: middle;
 }
 
+.note:hover {
+  cursor: default;
+}
+
 .accessLink {
   border-radius: var(--button-border-radius);
   background-color: var(--color-med);

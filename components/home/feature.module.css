@@ -18,6 +18,10 @@
   );
 }
 
+.feature:hover {
+  cursor: default;
+}
+
 .leftHeader,
 .rightHeader {
   position: absolute;

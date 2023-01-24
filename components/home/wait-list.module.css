@@ -72,6 +72,10 @@
   z-index: 1;
 }
 
+.textBox:hover {
+  cursor: default;
+}
+
 .waitHeader {
   font-size: 3.5rem;
   letter-spacing: 2px;

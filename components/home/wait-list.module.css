@@ -159,7 +159,8 @@
 
 .arrow,
 .check,
-.error {
+.error,
+.pending {
   padding: 10px;
   transition: all 0.3s linear;
 }
@@ -216,7 +217,8 @@
 
   .arrow,
   .check,
-  .error {
+  .error,
+  .pending {
     padding: 8px;
   }
 

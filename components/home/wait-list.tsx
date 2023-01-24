@@ -9,6 +9,7 @@ import arcs from '@/public/arcs.png';
 import arrow from '@/public/arrow.svg';
 import check from '@/public/check.svg';
 import errorIcon from '@/public/error.svg';
+import pendingIcon from '@/public/pending.svg';
 import styles from './wait-list.module.css';
 import AnimatedShapes from './animated-shapes';
 
@@ -16,6 +17,7 @@ const WaitList = () => {
   const [email, setEmail] = useState('');
   const [valid, setValid] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
   const [error, setError] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -35,6 +37,7 @@ const WaitList = () => {
 
   const handleSubmit = async (e: MouseEvent) => {
     e.preventDefault();
+    setPending(true);
 
     const response = await fetch('/api/waitlist', {
       method: 'POST',
@@ -53,6 +56,8 @@ const WaitList = () => {
     } else {
       setError(true);
     }
+
+    setPending(false);
   };
 
   return (
@@ -115,8 +120,8 @@ const WaitList = () => {
                       : styles.submitBtn
                   }
                   onClick={handleSubmit}
-                  disabled={!email || !valid || (submitted && true)}>
-                  {!submitted && !error && (
+                  disabled={!email || !valid || submitted || pending}>
+                  {!submitted && !error && !pending && (
                     <Image
                       className={styles.arrow}
                       src={arrow}
@@ -136,6 +141,14 @@ const WaitList = () => {
                     <Image
                       className={styles.error}
                       src={errorIcon}
+                      alt="success"
+                      fill
+                    />
+                  )}
+                  {pending && (
+                    <Image
+                      className={styles.pending}
+                      src={pendingIcon}
                       alt="success"
                       fill
                     />

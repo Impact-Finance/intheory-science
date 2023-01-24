@@ -3,7 +3,7 @@ import { useState, useEffect, CSSProperties } from 'react';
 import Image from 'next/image';
 
 import ArtBanner from './art-banner';
-import hexes from '@/public/hexagon-background.jpg';
+import hexes from '@/public/hexagon-background.png';
 import styles from './hero.module.css';
 
 interface HeroProps {

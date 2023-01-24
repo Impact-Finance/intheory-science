@@ -141,7 +141,7 @@
 
 @keyframes enlarge {
   to {
-    transform: scale(1.25) translateY(-25%);
+    transform: scale(1.7) translateY(-35%);
   }
 }
 

@@ -14,7 +14,7 @@
   object-fit: cover;
   -o-object-position: top;
   object-position: top;
-  filter: opacity(0.35);
+  filter: opacity(0.45);
 }
 
 .submitBox {

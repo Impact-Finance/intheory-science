@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ChangeEvent, MouseEvent } from 'react';
 
 import { Fade } from 'react-awesome-reveal';
-import background from '@/public/hexagon-background.jpg';
+import background from '@/public/hexagon-background.png';
 import triangle from '@/public/triangle.png';
 import arcs from '@/public/arcs.png';
 import arrow from '@/public/arrow.svg';

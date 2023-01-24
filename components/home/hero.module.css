@@ -11,8 +11,10 @@
 }
 
 .hexBg {
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: -1;
+  -o-object-position: bottom;
   object-position: bottom;
   animation: enlarge 1500s linear infinite;
   animation-play-state: paused;
@@ -29,6 +31,7 @@
 
 .header {
   padding: 25px 80px;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-image: linear-gradient(
     to bottom,
@@ -90,6 +93,7 @@
 .mainBtn {
   background-color: rgba(104, 234, 255, 0.15);
   font-size: 1.3rem;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px 25px;
   font-weight: 700;

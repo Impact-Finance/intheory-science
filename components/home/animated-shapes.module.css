@@ -34,6 +34,7 @@
 }
 
 .featureImage {
+  -o-object-fit: contain;
   object-fit: contain;
 }
 

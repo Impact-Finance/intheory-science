@@ -163,6 +163,7 @@
 .pending {
   padding: 10px;
   transition: all 0.3s linear;
+  animation: fullRotation 0.3s linear;
 }
 
 .submitBtn:not([disabled]) > .arrow {
@@ -266,5 +267,15 @@
   .submitBtn {
     font-size: 0.8rem;
     padding: 15px;
+  }
+}
+
+@keyframes fullRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

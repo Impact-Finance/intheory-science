@@ -137,7 +137,7 @@ const WaitList = () => {
                       fill
                     />
                   )}
-                  {error && (
+                  {error && !pending && (
                     <Image
                       className={styles.error}
                       src={errorIcon}

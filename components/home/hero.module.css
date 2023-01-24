@@ -16,7 +16,7 @@
   z-index: -1;
   -o-object-position: bottom;
   object-position: bottom;
-  animation: enlarge 1000s linear infinite;
+  animation: enlarge 1500s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
@@ -161,6 +161,9 @@
 }
 
 @media (max-width: 768px) {
+  .hexBg {
+    animation: enlarge 1000s linear infinite;
+  }
   .header {
     margin-top: 50px;
     padding: 25px 30px;

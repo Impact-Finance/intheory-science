@@ -215,12 +215,21 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .shapes {
-    top: -50px;
+    top: -120px;
   }
   .submitBox {
     padding: 25px 0;
+  }
+}
+@media (max-width: 425px) {
+  .shapes {
+    top: -350px;
+  }
+
+  .submitBox:hover > .shapes {
+    transform: scale(2.2) translateY(-15px);
   }
 }
 

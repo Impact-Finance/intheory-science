@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .artBox:nth-child(1),
   .artBox:nth-child(5) {
     display: none;

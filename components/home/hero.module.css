@@ -158,9 +158,12 @@
 
 @media (max-width: 768px) {
   .header {
+    margin-top: 50px;
     padding: 25px 30px;
   }
-
+  .heroContainer {
+    height: 90vh;
+  }
   .headerMain {
     font-weight: 600;
     letter-spacing: 4px;

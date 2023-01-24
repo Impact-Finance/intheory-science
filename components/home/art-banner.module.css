@@ -28,12 +28,13 @@
 
 @media (max-width: 768px) {
   .artBanner {
-    width: 170%;
+    width: 105%;
+    height: 35%;
   }
 }
 
 @media (max-width: 425px) {
   .artBanner {
-    width: 115%;
+    width: 160%;
   }
 }

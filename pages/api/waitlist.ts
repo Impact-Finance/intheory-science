@@ -1,19 +1,32 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { MongoClient } from 'mongodb';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
-  name: string;
+  message: string;
 };
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
   if (req.method === 'POST') {
-    const data = req.body;
-    const { email } = data;
-    res.status(200).json({ name: 'John Doe' });
+    try {
+      const data = req.body;
+
+      const client = await MongoClient.connect(
+        'mongodb+srv://bcornick:dFwCz8n1x4h1K0rv@intheory.4xsak5a.mongodb.net/waitlist?retryWrites=true&w=majority'
+      );
+      const db = client.db();
+
+      const waitlistCollection = db.collection('waitlist');
+
+      await waitlistCollection.insertOne(data);
+
+      client.close();
+
+      res.status(201).json({ message: 'Email added to wait list' });
+    } catch {
+      res.status(500).json({ message: 'Error adding email' });
+    }
   }
 }
-
-// "mongodb+srv://bcornick:dFwCz8n1x4h1K0rv@intheory.4xsak5a.mongodb.net/?retryWrites=true&w=majority"

@@ -110,6 +110,11 @@
   margin-top: 50px;
 }
 
+.errorInput {
+  color: #fe00fe !important;
+  border: 1px solid #fe00fe !important;
+}
+
 .emailInput:focus {
   outline: 1px solid rgba(255, 255, 255, 0.75);
   border: 1px solid transparent;
@@ -126,6 +131,11 @@
   filter: opacity(0.8);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   transition: all 0.3s;
+}
+
+.errorBtn {
+  border: 1px solid #fe00fe !important;
+  background-color: #fe00fe !important;
 }
 
 .submitBtn:active {
@@ -146,7 +156,8 @@
 }
 
 .arrow,
-.check {
+.check,
+.error {
   padding: 10px;
   transition: all 0.3s linear;
 }
@@ -202,7 +213,8 @@
   }
 
   .arrow,
-  .check {
+  .check,
+  .error {
     padding: 8px;
   }
 
@@ -223,6 +235,7 @@
     padding: 25px 0;
   }
 }
+
 @media (max-width: 425px) {
   .shapes {
     top: -350px;

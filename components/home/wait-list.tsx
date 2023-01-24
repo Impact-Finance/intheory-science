@@ -8,6 +8,7 @@ import triangle from '@/public/triangle.png';
 import arcs from '@/public/arcs.png';
 import arrow from '@/public/arrow.svg';
 import check from '@/public/check.svg';
+import errorIcon from '@/public/error.svg';
 import styles from './wait-list.module.css';
 import AnimatedShapes from './animated-shapes';
 
@@ -15,20 +16,43 @@ const WaitList = () => {
   const [email, setEmail] = useState('');
   const [valid, setValid] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+    if (
+      !email ||
+      !email.includes('@') ||
+      !email.includes('.') ||
+      email.includes(' ') ||
+      email.includes(',')
+    ) {
       setValid(false);
     } else {
       setValid(true);
     }
   };
 
-  const handleSubmit = (e: MouseEvent) => {
+  const handleSubmit = async (e: MouseEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setEmail('');
+
+    const response = await fetch('/api/waitlist', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+      setError(false);
+      setEmail('');
+    } else {
+      setError(true);
+    }
   };
 
   return (
@@ -73,7 +97,11 @@ const WaitList = () => {
                 <input
                   type="email"
                   name="email"
-                  className={styles.emailInput}
+                  className={
+                    error
+                      ? `${styles.emailInput} ${styles.errorInput}`
+                      : styles.emailInput
+                  }
                   value={email}
                   onChange={handleChange}
                 />
@@ -83,20 +111,33 @@ const WaitList = () => {
                   Email address
                 </label>
                 <button
-                  className={styles.submitBtn}
+                  className={
+                    error
+                      ? `${styles.submitBtn} ${styles.errorBtn}`
+                      : styles.submitBtn
+                  }
                   onClick={handleSubmit}
                   disabled={!email || !valid || (submitted && true)}>
-                  {!submitted ? (
+                  {!submitted && !error && (
                     <Image
                       className={styles.arrow}
                       src={arrow}
                       alt="submit arrow"
                       fill
                     />
-                  ) : (
+                  )}
+                  {submitted && !error && (
                     <Image
                       className={styles.check}
                       src={check}
+                      alt="success"
+                      fill
+                    />
+                  )}
+                  {error && (
+                    <Image
+                      className={styles.error}
+                      src={errorIcon}
                       alt="success"
                       fill
                     />

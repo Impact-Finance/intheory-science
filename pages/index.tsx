@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import Head from 'next/head';
 
 import Navbar from '@/components/layout/navbar';
 import Hero from '@/components/home/hero';

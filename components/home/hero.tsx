@@ -1,3 +1,5 @@
+import { useState, useEffect, CSSProperties } from 'react';
+
 import Image from 'next/image';
 
 import ArtBanner from './art-banner';
@@ -8,9 +10,31 @@ interface HeroProps {
   waitScroll: () => void;
 }
 
+interface ScrollStyle extends CSSProperties {
+  '--scroll': number;
+}
+
 const Hero = ({ waitScroll }: HeroProps) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollStyle: ScrollStyle = { '--scroll': scrollPosition };
+
   return (
-    <div className={styles.heroContainer}>
+    <div
+      className={styles.heroContainer}
+      style={scrollStyle}>
       <Image
         className={styles.hexBg}
         src={hexes}

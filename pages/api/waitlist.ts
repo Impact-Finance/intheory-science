@@ -5,6 +5,8 @@ type Data = {
   message: string;
 };
 
+const url: string = process.env.DB_CLIENT;
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -13,9 +15,7 @@ export default async function handler(
     try {
       const data = req.body;
 
-      const client = await MongoClient.connect(
-        'mongodb+srv://bcornick:dFwCz8n1x4h1K0rv@intheory.4xsak5a.mongodb.net/waitlist?retryWrites=true&w=majority'
-      );
+      const client = await MongoClient.connect(url);
       const db = client.db();
 
       const waitlistCollection = db.collection('waitlist');

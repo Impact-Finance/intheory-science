@@ -68,10 +68,8 @@ const WaitList = () => {
           sizes="100vw"
         />
         <Fade
-          direction="up"
           triggerOnce={true}
-          duration={1000}
-          delay={500}>
+          duration={1500}>
           <div className={styles.submitBox}>
             <div className={styles.shapes}>
               <AnimatedShapes

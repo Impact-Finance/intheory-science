@@ -95,11 +95,13 @@ const WaitList = () => {
                 platform.
               </p>
             </div>
-            <form className={styles.form}>
+            <form
+              className={styles.form}
+              autoComplete="off">
               <div>
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="address"
                   className={
                     error
                       ? `${styles.emailInput} ${styles.errorInput}`

@@ -192,6 +192,7 @@
 @media (max-width: 768px) {
   .submitBox {
     width: 85vw;
+    padding: 25px 0;
   }
 
   .waitHeader {
@@ -229,19 +230,11 @@
 
   .shapes {
     filter: opacity(0.2);
+    top: -120px;
   }
 
   .submitBox:hover > .shapes {
     filter: opacity(0.4);
-  }
-}
-
-@media (max-width: 768px) {
-  .shapes {
-    top: -120px;
-  }
-  .submitBox {
-    padding: 25px 0;
   }
 }
 

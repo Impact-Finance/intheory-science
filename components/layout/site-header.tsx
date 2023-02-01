@@ -20,10 +20,6 @@ const SiteHeader = () => {
         name="viewport"
         content="width=device-width, initial-scale=1"
       />
-      <link
-        rel="icon"
-        href="/inTheory.ico"
-      />
       <meta
         name="author"
         content="Impact Finance"

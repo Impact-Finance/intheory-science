@@ -15,7 +15,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     try {
-      const data = req.body;
+      const { email } = req.body;
 
       // For adding to MongoDB
       // const client = await MongoClient.connect(url);
@@ -28,8 +28,8 @@ export default async function handler(
       // client.close();
 
       const properties = {
-        email: data.email,
-        firstname: 'Waitlist Submission',
+        email: email,
+        firstname: email,
         contact_type__impact_finance_: 'User/Researcher',
       };
       const SimplePublicObjectInput = { properties };

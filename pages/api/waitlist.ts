@@ -30,6 +30,7 @@ export default async function handler(
       const properties = {
         email: data.email,
         firstname: 'Waitlist Submission',
+        contact_type__impact_finance_: 'User/Researcher',
       };
       const SimplePublicObjectInput = { properties };
 

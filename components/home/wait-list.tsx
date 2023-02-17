@@ -94,7 +94,7 @@ const WaitList = () => {
             <div className={styles.textBox}>
               <h3 className={styles.waitHeader}>Get first access.</h3>
               <p className={styles.description}>
-                Join the list to sign up for exclusive access to our launch
+                Join the list to sign up for first access to our launch
                 platform.
               </p>
             </div>

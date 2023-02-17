@@ -1,4 +1,3 @@
-// import { MongoClient } from 'mongodb';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Client } from '@hubspot/api-client';
 
@@ -6,7 +5,6 @@ type Data = {
   message: string;
 };
 
-// const url: string = process.env.DB_CLIENT;
 const token = process.env.HUBSPOT_TOKEN;
 
 export default async function handler(
@@ -16,16 +14,6 @@ export default async function handler(
   if (req.method === 'POST') {
     try {
       const { email } = req.body;
-
-      // For adding to MongoDB
-      // const client = await MongoClient.connect(url);
-      // const db = client.db();
-
-      // const waitlistCollection = db.collection('waitlist');
-
-      // await waitlistCollection.insertOne(data);
-
-      // client.close();
 
       const properties = {
         email: email,

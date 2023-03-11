@@ -37,7 +37,7 @@ const Navbar = ({ waitScroll }: NavBarProps) => {
           href="https://intheory.app"
           target="_blank"
           rel="noreferrer">
-          Access Private Beta
+          Private Beta
         </a>
       </div>
     </nav>

@@ -34,15 +34,11 @@ const Navbar = ({ waitScroll }: NavBarProps) => {
         <p className={styles.note}>Launching Summer 2023</p>
         <a
           className={styles.accessLink}
-          onClick={waitScroll}>
-          Join Wait List
+          href="https://intheory.app"
+          target="_blank"
+          rel="noreferrer">
+          Access Private Beta
         </a>
-        {/* <p className={styles.note}>● Private alpha access only</p> */}
-        {/* <a
-          className={styles.accessLink}
-          href="#">
-          Launch App
-        </a> */}
       </div>
     </nav>
   );

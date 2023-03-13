@@ -24,11 +24,6 @@ const Hero = ({ waitScroll }: HeroProps) => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

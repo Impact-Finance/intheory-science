@@ -146,6 +146,12 @@
   }
 }
 
+@media not all and (hover: hover) {
+  .heroContainer {
+    height: var(--app-height);
+  }
+}
+
 @media (max-width: 999px) {
   .header {
     padding: 25px 40px;

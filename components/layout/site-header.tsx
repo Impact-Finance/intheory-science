@@ -48,7 +48,7 @@ const SiteHeader = () => {
       />
       <meta
         name="twitter:image"
-        content="https://www.intheory.science/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta-image.f032aac5.jpg&w=3840&q=75"
+        content="https://i.imgur.com/ZT9raYd.png"
       />
 
       {/* <!-- Open Graph Meta Tags --> */}
@@ -74,7 +74,7 @@ const SiteHeader = () => {
       />
       <meta
         property="og:image"
-        content="https://www.intheory.science/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta-image.f032aac5.jpg&w=3840&q=75"
+        content="https://i.imgur.com/ZT9raYd.png"
       />
     </Head>
   );

@@ -34,7 +34,7 @@ const Navbar = ({ waitScroll }: NavBarProps) => {
         <p className={styles.note}>Launching Summer 2023</p>
         <a
           className={styles.accessLink}
-          href="https://intheory.app"
+          href="https://intheory-beta-mvp.vercel.app/"
           target="_blank"
           rel="noreferrer">
           Access Beta
